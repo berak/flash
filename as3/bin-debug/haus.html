@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">	
+    <!--   Smart developers always View Source. -->
+    <head>
+        <title></title>
+	    
+        <script type="text/javascript" src="swfobject.js"></script>
+        <script type="text/javascript">
+
+			//
+			// have your fun here!!
+			//
+			function gestureFound(id)
+			{
+				z=document.getElementById('found');
+				z.innerHTML = id==-1 ? "found none" : "found gesture " + id + " !";
+			}
+
+
+
+            <!-- For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. --> 
+            var swfVersionStr = "0.0.0";
+            <!-- To use express install, set to playerProductInstall.swf, otherwise the empty string. -->
+            var xiSwfUrlStr = "playerProductInstall.swf";
+            var flashvars = {};
+            var params = {};
+            params.quality = "high";
+            params.bgcolor = "777777";
+            params.allowscriptaccess = "sameDomain";
+            params.allowfullscreen = "true";
+            var attributes = {};
+            attributes.id = "haus";
+            attributes.name = "haus";
+            attributes.align = "middle";
+            swfobject.embedSWF(
+                "haus.swf", "flashContent", 
+                "240", "140", 
+                swfVersionStr, xiSwfUrlStr, 
+                flashvars, params, attributes);
+        </script>
+    </head>
+    <body bgColor=#777777  style="color: #eeeeee; FONT-FAMILY: Arial, 'MS Trebuchet'; font-size: 9pts;">
+	<table width="100%">
+	<tr>
+	<td valign="top">
+		<div id='found'> ... </div><br>
+        <div id="flashContent">
+        	<p>
+	        	To view this page ensure that Adobe Flash Player version 
+				0.0.0 or greater is installed. 
+			</p>
+        </div>
+	   	
+       	<noscript>
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="300" height="300" id="haus">
+                <param name="movie" value="haus.swf" />
+                <param name="quality" value="high" />
+                <param name="bgcolor" value="#ffffff" />
+                <param name="allowScriptAccess" value="sameDomain" />
+                <param name="allowFullScreen" value="true" />
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="haus.swf" width="300" height="300">
+                    <param name="quality" value="high" />
+                    <param name="bgcolor" value="#ffffff" />
+                    <param name="allowScriptAccess" value="sameDomain" />
+                    <param name="allowFullScreen" value="true" />
+                <!--<![endif]-->
+                <!--[if gte IE 6]>-->
+                	<p> 
+                		Either scripts and active content are not permitted to run or Adobe Flash Player version
+                		0.0.0 or greater is not installed.
+                	</p>
+                <!--<![endif]-->
+                    <a href="http://www.adobe.com/go/getflashplayer">
+                        <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash Player" />
+                    </a>
+                <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+            </object>
+	    </noscript>		
+
+	<br>
+	</td>
+	<td valign="top">
+		<h4>webcam gesture/shape recognition using hausdorff metrics. </h4>
+		<p>
+		play around with the binary threshold, <br>
+		using Down or Up keys, until you get a nice filled shape.
+		<p>
+		then adjust the edge threshold (Left/Right keys), until the inner points have vanished <br>
+		the less points left here, the faster we go later..
+		<p>
+		now, to record a gesture, press Enter, <br>
+		clear the last record with Backspace, or all of them with Del.
+		<p>
+		there you go !! (.. hard to remember, what your hands did only seconds ago :) <br>
+		<p> 
+		sometimes it's fun to binarize not the current image, but the <br>
+		diff to a previous frame, pressing Space will capture such a 'background' image, <br>
+		another Space will reset to a black buffer.
+		<p>
+		if you like to <a href="haus.zip" style="color:#ffffff;">play around whith it</a>,<br>
+		a javacrypt function called 'gestureFound' will get called each frame.<br>
+		<p>
+		please <a href="mailto:p4p4p4@web.de" style="color:#ffffff;">mail me</a>, if you've done something funny || useful.<br>
+		<p><br>
+		<p><br>
+		<p><br>
+		<p><br>
+		<p><br>
+		<p><br>
+		<p><br>
+		<p><br>
+		<p><br>
+		<font color="#888888">( dedicated to merce cunningham )
+	</td>
+	</tr>
+	</table>
+	<img src="../php/wcount.php" width=0 height=0>
+   </body>
+</html>
